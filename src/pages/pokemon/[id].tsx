@@ -1,5 +1,5 @@
 import * as React from "react"
-import PokemonInfo from "../components/pokemon-info";
+import PokemonInfo from "../../components/pokemon-info";
 
 // styles
 const pageStyles = {
@@ -9,8 +9,8 @@ const pageStyles = {
 }
 
 // markup
-const IndexPage = () => {
-  const pokemonId = 3
+const pokemonPage = (props: any) => {
+  const pokemonId = props.params.id
   return (
     <main style={pageStyles}>
       <PokemonInfo pokemonId={pokemonId} />
@@ -18,4 +18,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default pokemonPage
